@@ -144,10 +144,10 @@ form {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: auto;
+    height: 101%;
 }
 
-.rocketCoffe {
+.mobileHeader .rocketCoffe {
     width: 100%;
 }
 
