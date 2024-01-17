@@ -1,4 +1,5 @@
 let labelboolean = true;
+let mode;
 
 export const openMenu = () => {
   const form = document.querySelector(".openMenuMobile");
@@ -7,7 +8,6 @@ export const openMenu = () => {
   
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    let mode;
 
 
     labelboolean ? mode = "menu aberto" : mode = "menu fechado"
