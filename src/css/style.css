@@ -151,6 +151,8 @@ form {
     width: 100%;
 }
 
+/* menu mobile */
+
 .menuMobile {
     position: absolute;
     width: 100%;
@@ -182,12 +184,15 @@ form {
     border-left: 5px solid var(--button);
 }
 
-.visibility {
-    display: none;
-    visibility: hidden;
-}
 
 .menuMobile div {
     display: flex;
     flex-direction: column;
+}
+
+/* variable */
+
+.visibility {
+    display: none;
+    visibility: hidden;
 }
