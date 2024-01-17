@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --background: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+body {
+    background: var(--background);
+}
+
+html:not(.mobile) .logo-mobile,
+html.mobile .logo-desktop,
+html.mobile .navDesktop,
+html:not(.mobile) .menu-close,
+html:not(.mobile) .menu-open,
+html:not(.mobile) .container,
+#buttonMenu:not(.open) .menu-close,
+#buttonMenu.open .menu-open {
+    display: none;
+}
+
+/* Mobile */
+
+.container {
+    padding: 8.8rem 0;
+    width: min(40rem, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2,h1 {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--text-color-menu-mobile);
+}
+
+.showOtherColor {
+    text-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+    color: transparent;
+    -webkit-text-stroke: .1rem var(--button);
+}
+
+.container h2 {
+    text-align: center;
+    height: auto;
+    width: 100%;
+    letter-spacing: 0.4rem;
+    font-size: clamp(1rem, 1vw + 2rem, 3rem);
+}
+
+.sr-only {
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+header {
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+a {
+    font-weight: 400;
+}
+
+header #buttonMenu {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TakeMyCoffe {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: var(--text-color);
+    border: .1rem solid var(--button);
+    font-weight: bold;
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    gap: 2rem;
+    cursor: pointer;
+    transition: background 250ms ease-in;
+}
+
+.TakeMyCoffe:hover {
+    background: var(--button);
+}
+
+
+.mobileHeader {
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Text {
+    text-align: center;
+    margin-top: 10.3rem;
+}
+
+.mobileHeader .blur-mobile {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+.rocketCoffe {
+    width: 100%;
+}
+
+.menuMobile {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 6.5rem;
+    z-index: 1;
+    background: var(--background);
+}
+
+
+.menuMobile li {
+    padding: 1.7rem 0 1.4rem 2.6rem;
+    border-top:1px solid var(--border-menu-mobile);
+    border-bottom: 1px solid var(--border-menu-mobile);
+    width: 100%;
+    transition: border 250ms ease-in-out;
+}
+
+.menuMobile a {
+    font-size: 1.8rem;
+    color: var(--text-color-menu-mobile);
+}
+
+.menuMobile a:hover {
+    color: var(--text-color);
+}
+
+.menuMobile li:hover{
+    border-left: 5px solid var(--button);
+}
+
+.visibility {
+    display: none;
+    visibility: hidden;
+}
+
+.menuMobile div {
+    display: flex;
+    flex-direction: column;
+}
