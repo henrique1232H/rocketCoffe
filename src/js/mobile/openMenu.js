@@ -1,3 +1,5 @@
+let labelboolean = true;
+
 export const openMenu = () => {
   const form = document.querySelector(".openMenuMobile");
   const menu = document.querySelector(".menuMobile");
@@ -5,9 +7,18 @@ export const openMenu = () => {
   
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    let mode;
+
+
+    labelboolean ? mode = "menu aberto" : mode = "menu fechado"
+  
 
     form.querySelector("button").classList.toggle("open");
+    
+    form.querySelector("label").innerHTML = `${mode}`
     menu.classList.toggle("visibility");
     main.classList.toggle("visibility");
+
+    labelboolean = !labelboolean
   });
 };
