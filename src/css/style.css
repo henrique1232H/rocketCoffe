@@ -23,11 +23,13 @@ body {
 }
 
 html:not(.mobile) .logo-mobile,
-html.mobile .logo-desktop,
-html.mobile .navDesktop,
 html:not(.mobile) .menu-close,
 html:not(.mobile) .menu-open,
 html:not(.mobile) .container,
+html:not(.mobile) .blur-mobile,
+html.mobile .logo-desktop,
+html.mobile .navDesktop,
+html.mobile .blur,
 #buttonMenu:not(.open) .menu-close,
 #buttonMenu.open .menu-open {
     display: none;
@@ -195,4 +197,74 @@ form {
 .visibility {
     display: none;
     visibility: hidden;
+}
+
+@media (min-width: 900px) {
+    body {
+        position: relative;
+    }
+
+    header {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0;
+    }
+    nav {
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        margin: 0 13.1rem 0 25.1rem;
+    }
+
+    header ul {
+        display: flex;
+        gap: 3.23rem;
+    }
+
+    header li {
+        list-style: none;
+    }
+
+    header form {
+        flex: 1;
+    }
+
+
+    header li a {
+        font-size: 1.4rem;
+    }
+
+    main .Text h1 {
+        font-size: 8rem;
+    }
+
+    main .Text {
+        margin: 0;
+    }
+
+
+    .rocketCoffe {
+        width: 100%;
+        min-width: 10rem;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .blur {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .blur-1 {
+        bottom: 0;
+    }
+
+    .blur-2 {
+        top: 0;
+        right: 0;
+    }
 }
