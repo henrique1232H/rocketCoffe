@@ -250,8 +250,8 @@ form {
     .rocketCoffe {
         width: 100%;
         min-width: 10rem;
-        max-width: 80rem;
-        margin: 0 auto;
+        max-width: 70rem;
+        margin: 0 auto;;
     }
 
     .blur {
