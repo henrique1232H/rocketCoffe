@@ -199,9 +199,10 @@ form {
     visibility: hidden;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
     body {
         position: relative;
+        height: 100vh;
     }
 
     header {
@@ -212,6 +213,8 @@ form {
         padding: 5rem 0;
     }
     nav {
+        width: min(100rem, 90%);
+        margin: 0 auto;
         justify-content: center;
         align-items: center;
     }
@@ -243,15 +246,18 @@ form {
     }
 
     main .Text {
-        margin: 0;
+        margin: 0 auto;
     }
 
 
     .rocketCoffe {
+        display: flex;
+        align-items: center;
+        justify-content: end;
         width: 100%;
         min-width: 10rem;
-        max-width: 70rem;
-        margin: 0 auto;;
+        max-width: 68.3rem;
+        margin: 0 auto;
     }
 
     .blur {
@@ -261,10 +267,25 @@ form {
 
     .blur-1 {
         bottom: 0;
+        left: 0;
     }
 
     .blur-2 {
         top: 0;
         right: 0;
     }
+}
+
+@media (min-width: 2000px) and (max-width: 5000px) {
+    body {
+        position: static;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
